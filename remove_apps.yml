@@ -1,0 +1,12 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: remove tmux, glances
+    apt: 
+      name: tmux, glances
+      state: absent
+      purge: true
+      autoremove: true
