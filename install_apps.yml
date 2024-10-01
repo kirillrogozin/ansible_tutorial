@@ -7,13 +7,29 @@
   - name: update repository index
     apt:
       update_cache: true
-      
+    when: ansible_distribution in ["Ubuntu"] and ansible_distribution_version == "22.04"
+
   - name: install tmux
     apt: 
       name: tmux
       state: latest
+    when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "22.04"
 
   - name: install glances
     apt:
       name: glances
       state: latest 
+    when: ansible_distribution == "Ubuntu" and ansible_distribution_version == "22.04"
+
+
+  - name: update repository index
+    dnf:
+      update_cache: true
+    when: ansible_distribution in ["RedHat"]
+
+  - name: install tmux
+    dnf: 
+      name: tmux
+      state: latest
+    when: ansible_distribution == "RedHat"
+
