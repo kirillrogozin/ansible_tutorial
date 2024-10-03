@@ -1,3 +1,6 @@
-#student@student.sber.ru
-kirill@server.sber.ru
-kirill@rhel.sber.ru
+[server_1]
+kirill@server-1.sber.ru
+
+[server_2]
+kirill@server-2.sber.ru
+

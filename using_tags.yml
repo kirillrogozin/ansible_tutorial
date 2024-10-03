@@ -1,0 +1,38 @@
+---
+
+- hosts: all
+  become: true
+  pre_tasks: 
+  
+  - name: update cache
+    tags: always
+    apt:
+      update_cache: true  
+
+
+- hosts: server_1
+  become: true
+  tasks:
+
+  - name: install htop
+    tags: htop,server_1
+    apt: 
+      name: 
+         - htop
+      state: latest
+    when: ansible_distribution == "Ubuntu"
+
+           
+- hosts: server_2
+  become: true
+  tasks: 
+
+  - name: install glances
+    tags: glances,server_2
+    apt: 
+      name:
+        - htop
+      state: latest
+    when: ansible_distribution == "Ubuntu"
+
+

@@ -1,0 +1,45 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: install updates on Fedora
+    dnf:
+      update_only: true
+      update_cache: true
+    when: ansible_distribution == "Fedora"
+      
+      
+  - name: install updates on Ubuntu
+    apt:
+      only_upgrade: true
+      update_cache: yes
+    when: ansible_distribution == "Ubuntu"
+
+
+- hosts: ubuntu
+  become: true
+  tasks:
+
+  - name: install zabbix agent, tmux
+    apt: 
+      name: 
+         - zabbix-agent
+         - tmux
+      state: latest
+    when: ansible_distribution == "Ubuntu"
+
+
+- hosts: fedora
+  become: true
+  tasks:
+    
+  - name: install zabbix agent, tmux
+    dnf: 
+      name:
+        - zabbix-agent
+        - tmux
+      state: latest
+    when: ansible_distribution == "Fedora"
+
