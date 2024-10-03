@@ -1,0 +1,20 @@
+---
+
+- hosts: server_2
+  become: true
+  tasks:
+      
+      
+
+  - name: install apache, Lynx browser
+    apt: 
+      name: 
+         - apache2
+         - libapache2-mod-php
+         - lynx
+      state: latest
+      update_cache: true
+    when: ansible_distribution == "Ubuntu"
+
+
+
