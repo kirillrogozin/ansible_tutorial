@@ -4,3 +4,5 @@ kirill@server-1.sber.ru
 [server_2]
 kirill@server-2.sber.ru
 
+[workstations]
+localhost ansible_connection=local ansible_python_interpreter="/usr/bin/python3"
