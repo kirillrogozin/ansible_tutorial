@@ -1,0 +1,26 @@
+---
+
+- hosts: server_2
+  become: true
+  tasks:
+      
+      
+
+  - name: install apache, Lynx browser
+    apt: 
+      name: 
+         - apache2
+         - libapache2-mod-php
+         - lynx
+      state: latest
+      update_cache: true
+
+
+  - name: start apache2 (this is not required for Ubuntu. But for Fedora and RHEL you need to start services manually after installation in most cases)
+    tags: apache, start_service
+    service: 
+       name: apache2
+       state: started
+       enabled: true
+       
+

@@ -1,0 +1,40 @@
+---
+
+- hosts: server_2
+  become: true
+  tasks:
+      
+      
+
+  - name: install apache, Lynx browser
+    apt: 
+      name: 
+         - apache2
+         - libapache2-mod-php
+         - lynx
+      state: latest
+      update_cache: true
+
+
+  - name: start apache2 (this is not required for Ubuntu. But for Fedora and RHEL you need to start services manually after installation in most cases)
+    tags: apache, start_service
+    service: 
+       name: apache2
+       state: started
+       enabled: true
+       
+  - name: change timeout value in apache2.conf
+    tags: apache
+    lineinfile:
+      path: /etc/apache2/apache2.conf 
+      regexp: '^Timeout '
+      line: Timeout 300
+    register: config_file 
+
+  - name: restart apache2
+    tags: apache
+    service: 
+      name: apache2
+      state: restarted
+    when: config_file.changed
+
