@@ -3,3 +3,13 @@
   authorized_key:
     user: susan
     key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAO+H4XlpTs5mlC7LkQCKdNQXRGlaaJyUyRo7dx56UP2 ansible"
+
+- name: generate ssh_config file from template
+  tags: ssh
+  template:
+    src: "{{ ssh_template_file }}"
+    dest: /etc/ssh/ssh_config
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart_ssh

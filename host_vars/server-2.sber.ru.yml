@@ -2,3 +2,5 @@ apache_package_name: apache2
 apache_service: apache2
 php_package_name: libapache2-mod-php
 lynx_browser_package_name: lynx
+ssh_users: "kirill susane"
+ssh_template_file: ssh_config_server-2.j2
