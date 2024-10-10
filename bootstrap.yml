@@ -1,0 +1,40 @@
+---
+
+- hosts: server_1, server_2
+  become: true
+  tasks:
+      
+      
+  - name: install updates 
+    tags: always
+    apt:
+      update_cache: yes
+      upgrade: yes 
+    when: ansible_distribution == "Ubuntu"
+
+
+- hosts: server_1, server_2
+  become: true
+  tasks: 
+
+  - name: create susan user
+    tags: always
+    user:
+      name: susan
+      group: root 
+
+  - name: add ssh key for susan
+    tags: always
+    authorized_key:
+      user: susan
+      key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAO+H4XlpTs5mlC7LkQCKdNQXRGlaaJyUyRo7dx56UP2 ansible"
+
+  - name: add sudoers file for susan
+    tags: always
+    copy: 
+      src: sudoer_susan
+      dest: /etc/sudoers.d/susan
+      owner: root
+      group: root
+      mode: 0440
+

@@ -5,4 +5,4 @@ server-1.sber.ru
 server-2.sber.ru
 
 [workstations]
-localhost ansible_connection=local ansible_python_interpreter="/usr/bin/python3"
+susan@localhost ansible_connection=local ansible_python_interpreter="/usr/bin/python3"

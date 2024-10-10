@@ -1,0 +1,206 @@
+2024-10-09 17:01:33,201 p=13728 u=kirill n=ansible | playbook: site.yml
+2024-10-09 17:01:49,896 p=13736 u=kirill n=ansible | PLAY [all] ****************************************************************************
+2024-10-09 17:01:49,905 p=13736 u=kirill n=ansible | TASK [Gathering Facts] ****************************************************************
+2024-10-09 17:01:50,259 p=13736 u=kirill n=ansible | fatal: [localhost]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.setup": {"failed": true, "module_stderr": "sudo: a password is required\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}}, "msg": "The following modules failed to execute: ansible.legacy.setup\n"}
+2024-10-09 17:01:52,611 p=13736 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:01:52,996 p=13736 u=kirill n=ansible | ok: [server-1.sber.ru]
+2024-10-09 17:01:53,001 p=13736 u=kirill n=ansible | TASK [update cache] *******************************************************************
+2024-10-09 17:01:56,489 p=13736 u=kirill n=ansible | ok: [server-1.sber.ru]
+2024-10-09 17:01:57,029 p=13736 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:01:57,068 p=13736 u=kirill n=ansible | PLAY [all] ****************************************************************************
+2024-10-09 17:01:57,076 p=13736 u=kirill n=ansible | TASK [Gathering Facts] ****************************************************************
+2024-10-09 17:01:58,449 p=13736 u=kirill n=ansible | ok: [server-1.sber.ru]
+2024-10-09 17:01:58,505 p=13736 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:01:58,522 p=13736 u=kirill n=ansible | TASK [base : add ssh key for susan] ***************************************************
+2024-10-09 17:01:59,103 p=13736 u=kirill n=ansible | ok: [server-1.sber.ru]
+2024-10-09 17:01:59,123 p=13736 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:01:59,161 p=13736 u=kirill n=ansible | PLAY [server_2] ***********************************************************************
+2024-10-09 17:01:59,169 p=13736 u=kirill n=ansible | TASK [Gathering Facts] ****************************************************************
+2024-10-09 17:02:00,451 p=13736 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:02:00,466 p=13736 u=kirill n=ansible | TASK [web_servers : install apache, Lynx browser] *************************************
+2024-10-09 17:02:04,141 p=13736 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:02:04,147 p=13736 u=kirill n=ansible | TASK [web_servers : start apache2 (this is not required for Ubuntu. But for Fedora and RHEL you need to start services manually after installation in most cases)] ***
+2024-10-09 17:02:05,035 p=13736 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:02:05,042 p=13736 u=kirill n=ansible | TASK [web_servers : change timeout value in apache2.conf] *****************************
+2024-10-09 17:02:05,559 p=13736 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:02:05,565 p=13736 u=kirill n=ansible | TASK [web_servers : restart apache2] **************************************************
+2024-10-09 17:02:05,581 p=13736 u=kirill n=ansible | skipping: [server-2.sber.ru]
+2024-10-09 17:02:05,591 p=13736 u=kirill n=ansible | TASK [web_servers : copy default html file for site] **********************************
+2024-10-09 17:02:06,532 p=13736 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:02:06,567 p=13736 u=kirill n=ansible | PLAY [workstations] *******************************************************************
+2024-10-09 17:02:06,570 p=13736 u=kirill n=ansible | PLAY RECAP ****************************************************************************
+2024-10-09 17:02:06,570 p=13736 u=kirill n=ansible | localhost                  : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-10-09 17:02:06,570 p=13736 u=kirill n=ansible | server-1.sber.ru           : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-09 17:02:06,570 p=13736 u=kirill n=ansible | server-2.sber.ru           : ok=9    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-10-09 17:18:53,572 p=14672 u=kirill n=ansible | PLAY [all] ****************************************************************************
+2024-10-09 17:18:53,579 p=14672 u=kirill n=ansible | TASK [Gathering Facts] ****************************************************************
+2024-10-09 17:18:54,040 p=14672 u=kirill n=ansible | fatal: [localhost]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.setup": {"failed": true, "module_stderr": "sudo: a password is required\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}}, "msg": "The following modules failed to execute: ansible.legacy.setup\n"}
+2024-10-09 17:18:56,096 p=14672 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:18:56,309 p=14672 u=kirill n=ansible | ok: [server-1.sber.ru]
+2024-10-09 17:18:56,313 p=14672 u=kirill n=ansible | TASK [update cache] *******************************************************************
+2024-10-09 17:18:59,552 p=14672 u=kirill n=ansible | ok: [server-1.sber.ru]
+2024-10-09 17:18:59,571 p=14672 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:18:59,616 p=14672 u=kirill n=ansible | PLAY [all] ****************************************************************************
+2024-10-09 17:18:59,622 p=14672 u=kirill n=ansible | TASK [Gathering Facts] ****************************************************************
+2024-10-09 17:19:00,959 p=14672 u=kirill n=ansible | ok: [server-1.sber.ru]
+2024-10-09 17:19:01,072 p=14672 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:19:01,091 p=14672 u=kirill n=ansible | TASK [base : add ssh key for susan] ***************************************************
+2024-10-09 17:19:01,656 p=14672 u=kirill n=ansible | ok: [server-1.sber.ru]
+2024-10-09 17:19:01,663 p=14672 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:19:01,711 p=14672 u=kirill n=ansible | PLAY [server_2] ***********************************************************************
+2024-10-09 17:19:01,719 p=14672 u=kirill n=ansible | TASK [Gathering Facts] ****************************************************************
+2024-10-09 17:19:02,990 p=14672 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:19:03,005 p=14672 u=kirill n=ansible | TASK [web_servers : install apache, Lynx browser] *************************************
+2024-10-09 17:19:06,106 p=14672 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:19:06,112 p=14672 u=kirill n=ansible | TASK [web_servers : start apache2 (this is not required for Ubuntu. But for Fedora and RHEL you need to start services manually after installation in most cases)] ***
+2024-10-09 17:19:06,938 p=14672 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:19:06,944 p=14672 u=kirill n=ansible | TASK [web_servers : change timeout value in apache2.conf] *****************************
+2024-10-09 17:19:07,398 p=14672 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:19:07,403 p=14672 u=kirill n=ansible | TASK [web_servers : restart apache2] **************************************************
+2024-10-09 17:19:07,422 p=14672 u=kirill n=ansible | skipping: [server-2.sber.ru]
+2024-10-09 17:19:07,433 p=14672 u=kirill n=ansible | TASK [web_servers : copy default html file for site] **********************************
+2024-10-09 17:19:08,368 p=14672 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:19:08,388 p=14672 u=kirill n=ansible | PLAY [workstations] *******************************************************************
+2024-10-09 17:19:08,391 p=14672 u=kirill n=ansible | PLAY RECAP ****************************************************************************
+2024-10-09 17:19:08,392 p=14672 u=kirill n=ansible | localhost                  : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-10-09 17:19:08,392 p=14672 u=kirill n=ansible | server-1.sber.ru           : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-09 17:19:08,393 p=14672 u=kirill n=ansible | server-2.sber.ru           : ok=9    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-10-09 17:25:27,861 p=14973 u=kirill n=ansible | PLAY [all] ****************************************************************************
+2024-10-09 17:25:27,868 p=14973 u=kirill n=ansible | TASK [Gathering Facts] ****************************************************************
+2024-10-09 17:25:28,352 p=14973 u=kirill n=ansible | fatal: [localhost]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.setup": {"failed": true, "module_stderr": "sudo: a password is required\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}}, "msg": "The following modules failed to execute: ansible.legacy.setup\n"}
+2024-10-09 17:25:30,401 p=14973 u=kirill n=ansible | ok: [server-1.sber.ru]
+2024-10-09 17:25:30,416 p=14973 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:25:30,425 p=14973 u=kirill n=ansible | TASK [update cache] *******************************************************************
+2024-10-09 17:25:36,088 p=14973 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:25:37,672 p=14973 u=kirill n=ansible | ok: [server-1.sber.ru]
+2024-10-09 17:25:37,709 p=14973 u=kirill n=ansible | PLAY [server_2] ***********************************************************************
+2024-10-09 17:25:37,718 p=14973 u=kirill n=ansible | TASK [Gathering Facts] ****************************************************************
+2024-10-09 17:25:39,088 p=14973 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:25:39,102 p=14973 u=kirill n=ansible | TASK [base : add ssh key for susan] ***************************************************
+2024-10-09 17:25:39,715 p=14973 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:25:39,734 p=14973 u=kirill n=ansible | PLAY [server_2] ***********************************************************************
+2024-10-09 17:25:39,741 p=14973 u=kirill n=ansible | TASK [Gathering Facts] ****************************************************************
+2024-10-09 17:25:41,030 p=14973 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:25:41,046 p=14973 u=kirill n=ansible | TASK [web_servers : install apache, Lynx browser] *************************************
+2024-10-09 17:25:44,392 p=14973 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:25:44,399 p=14973 u=kirill n=ansible | TASK [web_servers : start apache2 (this is not required for Ubuntu. But for Fedora and RHEL you need to start services manually after installation in most cases)] ***
+2024-10-09 17:25:45,222 p=14973 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:25:45,231 p=14973 u=kirill n=ansible | TASK [web_servers : change timeout value in apache2.conf] *****************************
+2024-10-09 17:25:45,717 p=14973 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:25:45,723 p=14973 u=kirill n=ansible | TASK [web_servers : restart apache2] **************************************************
+2024-10-09 17:25:45,745 p=14973 u=kirill n=ansible | skipping: [server-2.sber.ru]
+2024-10-09 17:25:45,751 p=14973 u=kirill n=ansible | TASK [web_servers : copy default html file for site] **********************************
+2024-10-09 17:25:46,765 p=14973 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:25:46,797 p=14973 u=kirill n=ansible | PLAY [workstations] *******************************************************************
+2024-10-09 17:25:46,800 p=14973 u=kirill n=ansible | PLAY RECAP ****************************************************************************
+2024-10-09 17:25:46,801 p=14973 u=kirill n=ansible | localhost                  : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-10-09 17:25:46,801 p=14973 u=kirill n=ansible | server-1.sber.ru           : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-09 17:25:46,801 p=14973 u=kirill n=ansible | server-2.sber.ru           : ok=9    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-10-09 17:26:23,143 p=15139 u=kirill n=ansible | ERROR! the playbook: site could not be found
+2024-10-09 17:26:26,540 p=15164 u=kirill n=ansible | PLAY [all] *****************************************************************************************************************************************************************
+2024-10-09 17:26:26,548 p=15164 u=kirill n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************************
+2024-10-09 17:26:26,914 p=15164 u=kirill n=ansible | fatal: [localhost]: FAILED! => {"ansible_facts": {}, "changed": false, "failed_modules": {"ansible.legacy.setup": {"failed": true, "module_stderr": "sudo: a password is required\n", "module_stdout": "", "msg": "MODULE FAILURE\nSee stdout/stderr for the exact error", "rc": 1}}, "msg": "The following modules failed to execute: ansible.legacy.setup\n"}
+2024-10-09 17:26:28,231 p=15164 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:26:28,249 p=15164 u=kirill n=ansible | ok: [server-1.sber.ru]
+2024-10-09 17:26:28,254 p=15164 u=kirill n=ansible | TASK [update cache] ********************************************************************************************************************************************************
+2024-10-09 17:26:31,101 p=15164 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:26:31,110 p=15164 u=kirill n=ansible | ok: [server-1.sber.ru]
+2024-10-09 17:26:31,155 p=15164 u=kirill n=ansible | PLAY [server_2] ************************************************************************************************************************************************************
+2024-10-09 17:26:31,162 p=15164 u=kirill n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************************
+2024-10-09 17:26:32,401 p=15164 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:26:32,413 p=15164 u=kirill n=ansible | TASK [base : add ssh key for susan] ****************************************************************************************************************************************
+2024-10-09 17:26:32,991 p=15164 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:26:33,017 p=15164 u=kirill n=ansible | PLAY [server_2] ************************************************************************************************************************************************************
+2024-10-09 17:26:33,026 p=15164 u=kirill n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************************
+2024-10-09 17:26:34,305 p=15164 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:26:34,316 p=15164 u=kirill n=ansible | TASK [web_servers : install apache, Lynx browser] **************************************************************************************************************************
+2024-10-09 17:26:37,410 p=15164 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:26:37,416 p=15164 u=kirill n=ansible | TASK [web_servers : start apache2 (this is not required for Ubuntu. But for Fedora and RHEL you need to start services manually after installation in most cases)] *********
+2024-10-09 17:26:38,226 p=15164 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:26:38,233 p=15164 u=kirill n=ansible | TASK [web_servers : change timeout value in apache2.conf] ******************************************************************************************************************
+2024-10-09 17:26:38,703 p=15164 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:26:38,708 p=15164 u=kirill n=ansible | TASK [web_servers : restart apache2] ***************************************************************************************************************************************
+2024-10-09 17:26:38,730 p=15164 u=kirill n=ansible | skipping: [server-2.sber.ru]
+2024-10-09 17:26:38,737 p=15164 u=kirill n=ansible | TASK [web_servers : copy default html file for site] ***********************************************************************************************************************
+2024-10-09 17:26:39,645 p=15164 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:26:39,678 p=15164 u=kirill n=ansible | PLAY [workstations] ********************************************************************************************************************************************************
+2024-10-09 17:26:39,681 p=15164 u=kirill n=ansible | PLAY RECAP *****************************************************************************************************************************************************************
+2024-10-09 17:26:39,682 p=15164 u=kirill n=ansible | localhost                  : ok=0    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-10-09 17:26:39,682 p=15164 u=kirill n=ansible | server-1.sber.ru           : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-09 17:26:39,682 p=15164 u=kirill n=ansible | server-2.sber.ru           : ok=9    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-10-09 17:32:15,671 p=15348 u=kirill n=ansible | PLAY [all] *****************************************************************************************************************************************************************
+2024-10-09 17:32:15,685 p=15348 u=kirill n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************************
+2024-10-09 17:32:17,181 p=15348 u=kirill n=ansible | ok: [localhost]
+2024-10-09 17:32:18,229 p=15348 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:32:18,364 p=15348 u=kirill n=ansible | ok: [server-1.sber.ru]
+2024-10-09 17:32:18,370 p=15348 u=kirill n=ansible | TASK [update cache] ********************************************************************************************************************************************************
+2024-10-09 17:32:21,740 p=15348 u=kirill n=ansible | ok: [server-1.sber.ru]
+2024-10-09 17:32:21,803 p=15348 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:32:30,965 p=15348 u=kirill n=ansible | ok: [localhost]
+2024-10-09 17:32:31,024 p=15348 u=kirill n=ansible | PLAY [server_2] ************************************************************************************************************************************************************
+2024-10-09 17:32:31,030 p=15348 u=kirill n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************************
+2024-10-09 17:32:32,250 p=15348 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:32:32,259 p=15348 u=kirill n=ansible | TASK [base : add ssh key for susan] ****************************************************************************************************************************************
+2024-10-09 17:32:32,877 p=15348 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:32:32,906 p=15348 u=kirill n=ansible | PLAY [server_2] ************************************************************************************************************************************************************
+2024-10-09 17:32:32,912 p=15348 u=kirill n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************************
+2024-10-09 17:32:34,144 p=15348 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:32:34,155 p=15348 u=kirill n=ansible | TASK [web_servers : install apache, Lynx browser] **************************************************************************************************************************
+2024-10-09 17:32:37,316 p=15348 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:32:37,322 p=15348 u=kirill n=ansible | TASK [web_servers : start apache2 (this is not required for Ubuntu. But for Fedora and RHEL you need to start services manually after installation in most cases)] *********
+2024-10-09 17:32:38,049 p=15348 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:32:38,054 p=15348 u=kirill n=ansible | TASK [web_servers : change timeout value in apache2.conf] ******************************************************************************************************************
+2024-10-09 17:32:38,592 p=15348 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:32:38,597 p=15348 u=kirill n=ansible | TASK [web_servers : restart apache2] ***************************************************************************************************************************************
+2024-10-09 17:32:38,612 p=15348 u=kirill n=ansible | skipping: [server-2.sber.ru]
+2024-10-09 17:32:38,617 p=15348 u=kirill n=ansible | TASK [web_servers : copy default html file for site] ***********************************************************************************************************************
+2024-10-09 17:32:39,509 p=15348 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:32:39,531 p=15348 u=kirill n=ansible | PLAY [workstations] ********************************************************************************************************************************************************
+2024-10-09 17:32:39,547 p=15348 u=kirill n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************************
+2024-10-09 17:32:40,611 p=15348 u=kirill n=ansible | ok: [localhost]
+2024-10-09 17:32:40,623 p=15348 u=kirill n=ansible | TASK [workstations : install unzip] ****************************************************************************************************************************************
+2024-10-09 17:32:41,722 p=15348 u=kirill n=ansible | ok: [localhost]
+2024-10-09 17:32:41,727 p=15348 u=kirill n=ansible | TASK [workstations : install terraform] ************************************************************************************************************************************
+2024-10-09 17:33:06,368 p=15348 u=kirill n=ansible | ok: [localhost]
+2024-10-09 17:33:06,398 p=15348 u=kirill n=ansible | PLAY RECAP *****************************************************************************************************************************************************************
+2024-10-09 17:33:06,398 p=15348 u=kirill n=ansible | localhost                  : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-09 17:33:06,398 p=15348 u=kirill n=ansible | server-1.sber.ru           : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-09 17:33:06,398 p=15348 u=kirill n=ansible | server-2.sber.ru           : ok=9    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-10-09 17:33:59,246 p=16305 u=kirill n=ansible | PLAY [all] *****************************************************************************************************************************************************************
+2024-10-09 17:33:59,255 p=16305 u=kirill n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************************
+2024-10-09 17:34:00,924 p=16305 u=kirill n=ansible | ok: [susan@localhost]
+2024-10-09 17:34:01,608 p=16305 u=kirill n=ansible | ok: [server-1.sber.ru]
+2024-10-09 17:34:01,625 p=16305 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:34:01,635 p=16305 u=kirill n=ansible | TASK [update cache] ********************************************************************************************************************************************************
+2024-10-09 17:34:04,659 p=16305 u=kirill n=ansible | ok: [server-1.sber.ru]
+2024-10-09 17:34:04,775 p=16305 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:34:14,223 p=16305 u=kirill n=ansible | ok: [susan@localhost]
+2024-10-09 17:34:14,288 p=16305 u=kirill n=ansible | PLAY [server_2] ************************************************************************************************************************************************************
+2024-10-09 17:34:14,293 p=16305 u=kirill n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************************
+2024-10-09 17:34:15,637 p=16305 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:34:15,661 p=16305 u=kirill n=ansible | TASK [base : add ssh key for susan] ****************************************************************************************************************************************
+2024-10-09 17:34:16,238 p=16305 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:34:16,257 p=16305 u=kirill n=ansible | PLAY [server_2] ************************************************************************************************************************************************************
+2024-10-09 17:34:16,264 p=16305 u=kirill n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************************
+2024-10-09 17:34:17,556 p=16305 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:34:17,566 p=16305 u=kirill n=ansible | TASK [web_servers : install apache, Lynx browser] **************************************************************************************************************************
+2024-10-09 17:34:20,730 p=16305 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:34:20,736 p=16305 u=kirill n=ansible | TASK [web_servers : start apache2 (this is not required for Ubuntu. But for Fedora and RHEL you need to start services manually after installation in most cases)] *********
+2024-10-09 17:34:21,550 p=16305 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:34:21,555 p=16305 u=kirill n=ansible | TASK [web_servers : change timeout value in apache2.conf] ******************************************************************************************************************
+2024-10-09 17:34:22,046 p=16305 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:34:22,050 p=16305 u=kirill n=ansible | TASK [web_servers : restart apache2] ***************************************************************************************************************************************
+2024-10-09 17:34:22,078 p=16305 u=kirill n=ansible | skipping: [server-2.sber.ru]
+2024-10-09 17:34:22,083 p=16305 u=kirill n=ansible | TASK [web_servers : copy default html file for site] ***********************************************************************************************************************
+2024-10-09 17:34:23,009 p=16305 u=kirill n=ansible | ok: [server-2.sber.ru]
+2024-10-09 17:34:23,038 p=16305 u=kirill n=ansible | PLAY [workstations] ********************************************************************************************************************************************************
+2024-10-09 17:34:23,044 p=16305 u=kirill n=ansible | TASK [Gathering Facts] *****************************************************************************************************************************************************
+2024-10-09 17:34:24,082 p=16305 u=kirill n=ansible | ok: [susan@localhost]
+2024-10-09 17:34:24,092 p=16305 u=kirill n=ansible | TASK [workstations : install unzip] ****************************************************************************************************************************************
+2024-10-09 17:34:25,250 p=16305 u=kirill n=ansible | ok: [susan@localhost]
+2024-10-09 17:34:25,258 p=16305 u=kirill n=ansible | TASK [workstations : install terraform] ************************************************************************************************************************************
+2024-10-09 17:34:51,291 p=16305 u=kirill n=ansible | ok: [susan@localhost]
+2024-10-09 17:34:51,319 p=16305 u=kirill n=ansible | PLAY RECAP *****************************************************************************************************************************************************************
+2024-10-09 17:34:51,320 p=16305 u=kirill n=ansible | server-1.sber.ru           : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-10-09 17:34:51,320 p=16305 u=kirill n=ansible | server-2.sber.ru           : ok=9    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2024-10-09 17:34:51,320 p=16305 u=kirill n=ansible | susan@localhost            : ok=5    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
